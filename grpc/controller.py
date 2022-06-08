@@ -203,7 +203,7 @@ class SpringfieldControllerService(ControllerServicer):
                     segments={"hostname": os.uname().nodename})
             ])
         volume_map = VolumeMap(
-            request.name, csi_volume, device)
+            request.name, csi_volume, lv)
 
         volume_list.append(volume_map)
         print_volume_list()
